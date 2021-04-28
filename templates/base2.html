@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style type='text/css'>
+  table{
+
+
+  }
+  body{
+  #  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6TImRm7sJno8OEAl59llKF6cgcq_0J6PdQ&usqp=CAU'):
+
+  }
+  </style>
+</head>
+<body>
+  <center>
+<h2>STUDENT DETAILS</h2>
+</center>
+{% if raj %}
+<table border="3px">
+    <tr>
+        <th>STUDENT ID</th>
+        <th>STUDENT NAME</th>
+        <th>STUDENT BARNCH</th>
+        <th>MARKS OF TELUGU</th>
+        <th>MARKS OF HINDI</th>
+        <th>MARKS OF ENGLISH</th>
+        <th>MARKS OF MATHES</th>
+        <th>MARKS OF SCIENCE</th>
+        <th>MARKS OF SOCIAL</th>
+        <th>MARKS OF TOTAL</th>
+        <th>PERCENTAGE</th>
+        <th>RESULT</th>
+    </tr>
+    {% for p in raj %}
+    <tr>
+        <td>{{ p.sid }}</td>
+        <td>{{ p.sname }}</td>
+        <td>{{ p.sbranch }}</td>
+        <td>{{ p.telugu }}</td>
+        <td>{{ p.hindi }}</td>
+        <td>{{ p.english }}</td>
+        <td>{{ p.mathes }}</td>
+        <td>{{ p.science }}</td>
+        <td>{{ p.social }}</td>
+        <td>{{ p.total }}</td>
+        <td>{{ p.sperc }}</td>
+        <td>{{ p.result }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>no records found</p>
+{% endif %}
+</body>
+</html>
